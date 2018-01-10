@@ -1,0 +1,9 @@
+{	"expiration" : {"day":1},
+	"conditions": [ ["starts-with", "$key", "uploadedImages/"],
+    				 {"bucket": "awsprojectbucket1"},
+    				 {"acl": "public-read"},
+    				 {"success_action_redirect": "https://s3-us-west-2.amazonaws.com/awsprojectbucket1/Success.html"},
+					 {"x-amz-meta-Author": "Bartosz Lewandowski"},
+    				 ["content-length-range", 0, 1048576]
+    				]
+}
